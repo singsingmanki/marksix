@@ -43,3 +43,19 @@ margin: 5px;
     background-color: red;
     margin: 10px;
 }
+
+#loader {
+    animation: move 2s linear infinite;
+    position: relative;
+  }
+
+  @keyframes move {
+    0% {
+      left: 500px;
+      /* transform: rotate(0deg); */
+    }
+    100% {
+      left: 1000px;
+      /* transform: rotate(360deg); */
+    }
+  }
