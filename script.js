@@ -68,7 +68,7 @@ numArr.sort(function(a, b){return a-b})
     
  }
 
- arr.sort(function(a, b){return a-b})
+
 
 
 for(let i = 0; i < arr.length; i++){
@@ -78,6 +78,18 @@ for(let i = 0; i < arr.length; i++){
         }
     }
 }
+
+arr.sort(function(a, b){return a-b})
+
+function add(){
+    document.getElementById("xyz").appendChild(para).appendChild(para1)
+    
+    document.getElementById("xyz").appendChild(para).appendChild(para2)
+    
+    document.getElementById("xyz").appendChild(para).appendChild(para3)
+    }
+
+
 
 let para = document.createElement("div");
 
@@ -102,36 +114,26 @@ para3.classList.add("my");
 para3.innerText = "猜中數目 " + "\n" + count 
 
 
+
+let invalid = false
 for(let gg = 0; gg < arr.length;gg++) {
 
     for (let ggg = gg + 1 ; ggg < arr.length; ggg++) {
 
        
-if(arr[gg] == arr[ggg] || arr[gg]<=0 || arr[gg]>49 || arr[gg] == ''){
+if(arr[ggg] == arr[gg] || arr[gg]<=0 || arr[gg]>49 || arr[gg] == ''||arr[ggg]== ''){
     alert('please input correct numbers')
-    return;
-}else{
-
-    function add(){
-    document.getElementById("xyz").appendChild(para).appendChild(para1)
-    
-    document.getElementById("xyz").appendChild(para).appendChild(para2)
-    
-    document.getElementById("xyz").appendChild(para).appendChild(para3)
-    }
-
-    busImg.style.display = "block";
-    setTimeout(add, 1500);
-    setTimeout(hideBus, 1500);
-    
-
-
+    return invalid = true
 }
-     
 
     }
 }
 
+if(!invalid){
+busImg.style.display = "block";
+setTimeout(add, 1500);
+setTimeout(hideBus, 1500);
+}
 
 
 para.addEventListener("click", removeFunction);
@@ -140,7 +142,6 @@ function removeFunction() {
     document.getElementById("xyz").removeChild(para)
 }
 }
-
 
 
 
