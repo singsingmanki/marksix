@@ -1,5 +1,13 @@
 const element = document.getElementById("myBtn");
 
+const busImg = document.getElementById("loader");
+
+function hideBus() {
+    busImg.style.display = "none";
+  }
+  
+  hideBus();
+
 
 element.addEventListener("click", myFunction);
 
@@ -94,21 +102,37 @@ para3.classList.add("my");
 para3.innerText = "No. of true " + "\n" + count 
 
 
-for(let gg=0;gg<arr.length;gg++){
-    if(arr[gg] <= 0 || arr[gg]>49 || arr[gg] == ''){
-        alert("please input correct number")
-        return;
-        
-    } else{
-        document.getElementById("xyz").appendChild(para).appendChild(para1)
+for(let gg = 0; gg < arr.length;gg++) {
 
-document.getElementById("xyz").appendChild(para).appendChild(para2)
+    for (let ggg = gg + 1 ; ggg < arr.length; ggg++) {
 
-document.getElementById("xyz").appendChild(para).appendChild(para3)
+       
+if(arr[gg] == arr[ggg] || arr[gg]<=0 || arr[gg]>49 || arr[gg] == ''){
+    alert('please input correct numbers')
+    return;
+}else{
+
+    function add(){
+    document.getElementById("xyz").appendChild(para).appendChild(para1)
+    
+    document.getElementById("xyz").appendChild(para).appendChild(para2)
+    
+    document.getElementById("xyz").appendChild(para).appendChild(para3)
+    }
+
+    busImg.style.display = "block";
+    setTimeout(add, 2000);
+    setTimeout(hideBus, 2000);
+    
+
+
+}
+     
 
     }
-    
 }
+
+
 
 para.addEventListener("click", removeFunction);
 
@@ -116,6 +140,10 @@ function removeFunction() {
     document.getElementById("xyz").removeChild(para)
 }
 }
+
+
+
+
 
 
 
