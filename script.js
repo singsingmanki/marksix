@@ -87,7 +87,7 @@ let para1 = document.createElement("div");
 
 para1.classList.add("my");
 
-para1.innerText = "你的選擇 " + arr 
+para1.innerText = "你的選擇 " + "\n" + arr
 
 let para2 = document.createElement("div");
 
