@@ -121,8 +121,8 @@ if(arr[gg] == arr[ggg] || arr[gg]<=0 || arr[gg]>49 || arr[gg] == ''){
     }
 
     busImg.style.display = "block";
-    setTimeout(add, 2000);
-    setTimeout(hideBus, 2000);
+    setTimeout(add, 1500);
+    setTimeout(hideBus, 1500);
     
 
 
@@ -140,6 +140,12 @@ function removeFunction() {
     document.getElementById("xyz").removeChild(para)
 }
 }
+
+
+
+
+
+
 
 
 
