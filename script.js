@@ -43,11 +43,6 @@ numArr.sort(function(a, b){return a-b})
     arr.push(document.getElementById("6name").value)
     arr.push(document.getElementById("7name").value)
     
-    for(let ggg=0;ggg<arr.length;ggg++){
-
-    }
-
-
 
 
  if (arr == ',,,,,,'){
@@ -68,12 +63,13 @@ numArr.sort(function(a, b){return a-b})
     
  }
 
-
+let right = []
 
 
 for(let i = 0; i < arr.length; i++){
     for(let j = 0; j < numArr.length; j++){
         if(arr[i] == numArr[j]){
+           right.push(arr[i])
             count++
         }
     }
@@ -111,7 +107,13 @@ let para3 = document.createElement("div");
 
 para3.classList.add("my");
 
-para3.innerText = "猜中數目 " + "\n" + count 
+console.log(right)
+
+if(right.length == 0){
+    right = "null"
+}
+
+para3.innerText = "猜中數目 " + "\n" + count + "(" + right + ")"
 
 
 
@@ -142,9 +144,6 @@ function removeFunction() {
     document.getElementById("xyz").removeChild(para)
 }
 }
-
-
-
 
 
 
