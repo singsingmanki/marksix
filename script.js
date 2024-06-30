@@ -87,19 +87,19 @@ let para1 = document.createElement("div");
 
 para1.classList.add("my");
 
-para1.innerText = "Your choice " + arr 
+para1.innerText = "你的選擇 " + arr 
 
 let para2 = document.createElement("div");
 
 para2.classList.add("my");
 
-para2.innerText = "Result " + "\n" + numArr
+para2.innerText = "攪珠結果 " + "\n" + numArr
 
 let para3 = document.createElement("div");
 
 para3.classList.add("my");
 
-para3.innerText = "No. of true " + "\n" + count 
+para3.innerText = "猜中數目 " + "\n" + count 
 
 
 for(let gg = 0; gg < arr.length;gg++) {
