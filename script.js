@@ -2,7 +2,11 @@ const element = document.getElementById("myBtn");
 
 const busImg = document.getElementById("loader");
 
+
+
 function hideBus() {
+
+    
     busImg.style.display = "none";
   }
   
@@ -12,6 +16,22 @@ function hideBus() {
 element.addEventListener("click", myFunction);
 
 function myFunction() {
+    
+let para = document.createElement("div");
+
+para.classList.add("all");
+
+let para1 = document.createElement("div");
+
+para1.classList.add("my");
+
+let para2 = document.createElement("div");
+
+para2.classList.add("my");
+
+let para3 = document.createElement("div");
+
+para3.classList.add("my");
 
     let numArr = [];
 for (let i = 0; i < 7; i++) {
@@ -76,6 +96,7 @@ for(let i = 0; i < arr.length; i++){
 }
 
 arr.sort(function(a, b){return a-b})
+right.sort(function(a, b){return a-b})
 
 function add(){
     document.getElementById("xyz").appendChild(para).appendChild(para1)
@@ -87,30 +108,21 @@ function add(){
 
 
 
-let para = document.createElement("div");
 
-para.classList.add("all");
 
-let para1 = document.createElement("div");
 
-para1.classList.add("my");
+    para1.innerText = "你的選擇 " + "\n" + arr
 
-para1.innerText = "你的選擇 " + "\n" + arr
 
-let para2 = document.createElement("div");
-
-para2.classList.add("my");
 
 para2.innerText = "攪珠結果 " + "\n" + numArr
 
-let para3 = document.createElement("div");
 
-para3.classList.add("my");
 
-console.log(right)
+
 
 if(right.length == 0){
-    right = "null"
+    right = "沒有"
 }
 
 para3.innerText = "猜中數目 " + "\n" + count + "(" + right + ")"
@@ -144,7 +156,6 @@ function removeFunction() {
     document.getElementById("xyz").removeChild(para)
 }
 }
-
 
 
 
