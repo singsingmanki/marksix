@@ -4,6 +4,8 @@ const busImg = document.getElementById("loader");
 
 
 
+
+
 function hideBus() {
 
     
@@ -13,9 +15,21 @@ function hideBus() {
   hideBus();
 
 
-element.addEventListener("click", myFunction);
+element.addEventListener("click", few);
+
+function few(){
+    document.getElementById("xyz").innerHTML = ""
+    let y = document.getElementById("8name").value;
+    console.log(y)
+let x = 0
+while(x<y){
+    myFunction() 
+    x++
+}}
+
 
 function myFunction() {
+
     
 let para = document.createElement("div");
 
@@ -53,6 +67,7 @@ numArr.sort(function(a, b){return a-b})
     let arr = []
 
     let count = 0
+
 
 
     arr.push(document.getElementById("lname").value)
@@ -99,11 +114,15 @@ arr.sort(function(a, b){return a-b})
 right.sort(function(a, b){return a-b})
 
 function add(){
+
+   
+
     document.getElementById("xyz").appendChild(para).appendChild(para1)
     
     document.getElementById("xyz").appendChild(para).appendChild(para2)
     
     document.getElementById("xyz").appendChild(para).appendChild(para3)
+
     }
 
 
@@ -147,6 +166,7 @@ if(!invalid){
 busImg.style.display = "block";
 setTimeout(add, 1500);
 setTimeout(hideBus, 1500);
+
 }
 
 
