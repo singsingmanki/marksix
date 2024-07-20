@@ -139,7 +139,7 @@ if(count == 0){
     amount += 1000
     count2++
 } else if (count ==3){
-    amount += 2000
+    amount += 1500
     count3++
 }else if (count ==4){
     amount += 5000
